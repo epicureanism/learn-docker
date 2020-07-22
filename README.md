@@ -29,7 +29,7 @@ docker cp ricky.md docker-tutorial:./
 
 
 ## docker commit/push
-Push the local image to remote.
+Commit the local container as a image and push to remote Registry.
 
 ```sh
 docker commit docker-tutorial epicureanism/docker101tutorial
