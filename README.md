@@ -26,6 +26,28 @@ docker cp ricky.md docker-tutorial:./
 #docker cp [OPTIONS] SRC_PATH|- CONTAINER:DEST_PATH
 ```
 
+
+
+## docker commit/push
+Push the local image to remote.
+
+```sh
+docker commit docker-tutorial epicureanism/docker101tutorial
+# commit local container "docker-tutorial" to the image "epicureanism/docker101tutorial"
+
+docker tag 10639231ba2b epicureanism/docker101tutorial:0.1
+# tag the local container ID as a remote image name with version number.
+
+docker push epicureanism/docker101tutorial:0.1
+```
+
+## docker exec
+Enter bash mode in the specified container.
+
+```sh
+docker exec -it docker-tutorial bash
+```
+
 ## docker export
 Export a container’s filesystem as a tar archive
 ```sh
@@ -34,15 +56,4 @@ docker export -o docker-tutorial.tar docker-tutorial
 # Specify the local container name "docker-tutorial" and export this container as "docker-tutorial.tar" file.
 ```
 
-## docker push
-Push the local image to remote
-
-```sh
-docker commit docker-tutorial epicureanism/docker101tutorial
-
-docker tag 10639231ba2b epicureanism/docker101tutorial:0.1
-# tag the local image ID as a remote image name with version number.
-
-docker push epicureanism/docker101tutorial:0.1
-```
 
