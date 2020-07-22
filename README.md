@@ -41,6 +41,7 @@ Push the local image to remote
 docker commit docker-tutorial epicureanism/docker101tutorial
 
 docker tag 10639231ba2b epicureanism/docker101tutorial:0.1
+# tag the local image ID as a remote image name with version number.
 
 docker push epicureanism/docker101tutorial:0.1
 ```
